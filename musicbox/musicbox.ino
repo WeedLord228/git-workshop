@@ -10,8 +10,8 @@ Button buttonMelodyOne(PIN_BUTTON_MEL_ONE);
 Button buttonOff(PIN_BUTTON_OFF);
 Buzzer buzzer(PIN_BUZZER);
 
-int notes[] = {NOTE_A4, NOTE_SILENCE, NOTE_G4, NOTE_SILENCE};
-double durations[] = {8, 1, 4, 1};
+int notes[] = {NOTE_G1, NOTE_G4, NOTE_G1, NOTE_G4};
+double durations[] = {2,2, 2, 2};
 int melodyLength = 4;
 
 // maybe somewhere in the future we will have one more button...
@@ -25,21 +25,23 @@ int melodyLength = 4;
 
 void setup()
 {
-    buzzer.setMelody(notes, durations, melodyLength);
+  Serial.begin(115200)
+  buzzer.setMelody(notes, durations, melodyLength);
 }
 
 void loop()
 {
-    buzzer.playSound();
+  Serial.print("test")
+  buzzer.playSound();
 
-    if (buttonOff.wasPressed())
-    {
-        buzzer.turnSoundOff();
-    }
+  if (buttonOff.wasPressed())
+  {
+    buzzer.turnSoundOff();
+  }
 
-    if (buttonMelodyOne.wasPressed())
-    {
-        buzzer.setMelody(notes, durations, melodyLength);
-        buzzer.turnSoundOn();
-    }
+  if (buttonMelodyOne.wasPressed())
+  {
+    buzzer.setMelody(notes, durations, melodyLength);
+    buzzer.turnSoundOn();
+  }
 }

@@ -13,7 +13,7 @@ Button buttonSpeed(PIN_BUTTON_SPEED);
 Buzzer buzzer(PIN_BUZZER);
 
 int notes[] = {NOTE_GS4, NOTE_AS4, NOTE_FS4, NOTE_GS4,NOTE_SILENCE, NOTE_B4, NOTE_AS4, NOTE_FS4, NOTE_GS4, NOTE_SILENCE};
-double durations[] = {4,2,2,4,10,4,2,2,6,10};
+double durations[] = {4,2,1,5,10,4,2,2,5,10};
 int melodyLength = 10;
 
 unsigned long speeds[] = {25, 50, 100, 200, 400, 800};

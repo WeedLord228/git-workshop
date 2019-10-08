@@ -18,6 +18,7 @@ Buzzer buzzer(PIN_BUZZER);
 
 int notes[] = {NOTE_DS3, NOTE_DS3, NOTE_DS4, NOTE_DS3,NOTE_DS3, NOTE_CS4, NOTE_DS3, NOTE_DS3, NOTE_B3, NOTE_DS3, NOTE_DS3, NOTE_A3,NOTE_SILENCE,NOTE_DS3, NOTE_AS3,NOTE_B3, NOTE_DS3, NOTE_DS3, NOTE_DS4, NOTE_DS3,NOTE_DS3,NOTE_CS4, NOTE_DS3, NOTE_DS3,NOTE_B3, NOTE_DS3};
 double durations[] = {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};
+int melodyLength = 26;
 
 unsigned long speeds[] = {25, 50, 100, 200, 400, 800};
 int currentSpeed = 2;

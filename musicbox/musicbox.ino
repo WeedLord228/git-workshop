@@ -12,9 +12,12 @@ Button buttonOff(PIN_BUTTON_OFF);
 Button buttonSpeed(PIN_BUTTON_SPEED);
 Buzzer buzzer(PIN_BUZZER);
 
-int notes[] = {NOTE_GS4, NOTE_AS4, NOTE_FS4, NOTE_GS4,NOTE_SILENCE, NOTE_B4, NOTE_AS4, NOTE_FS4, NOTE_GS4, NOTE_SILENCE};
-double durations[] = {4,2,1,5,10,4,2,2,5,10};
-int melodyLength = 10;
+//int notes[] = {NOTE_DS4, NOTE_AS4, NOTE_FS4, NOTE_GS4,NOTE_SILENCE, NOTE_B4, NOTE_AS4, NOTE_FS4, NOTE_GS4, NOTE_SILENCE};
+//double durations[] = {4,2,1,5,10,4,2,2,5,10};
+//int melodyLength = 10;
+
+int notes[] = {NOTE_DS3, NOTE_DS3, NOTE_DS4, NOTE_DS3,NOTE_DS3, NOTE_CS4, NOTE_DS3, NOTE_DS3, NOTE_B3, NOTE_DS3, NOTE_DS3, NOTE_A3,NOTE_SILENCE,NOTE_DS3, NOTE_AS3,NOTE_B3, NOTE_DS3, NOTE_DS3, NOTE_DS4, NOTE_DS3,NOTE_DS3,NOTE_CS4, NOTE_DS3, NOTE_DS3,NOTE_B3, NOTE_DS3};
+double durations[] = {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};
 
 unsigned long speeds[] = {25, 50, 100, 200, 400, 800};
 int currentSpeed = 2;
@@ -57,4 +60,6 @@ void loop()
         currentSpeed = (currentSpeed + 1)%speedsLength;
         buzzer.setNoteDuration(speeds[currentSpeed]);
    }
+
+  
 }
